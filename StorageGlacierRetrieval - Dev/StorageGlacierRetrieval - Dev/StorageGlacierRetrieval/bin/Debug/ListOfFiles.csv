@@ -1,0 +1,43 @@
+Bus_No,CloudLocation,FileNameNoPath,FileRestored
+1000153,b783283d-7e0d-4ca0-b14a-af150ea795ac,,"Amazon.SecurityToken.AmazonSecurityTokenServiceException: User: arn:aws:iam::545209810301:user/_Storage_Automation_Service_User is not authorized to perform: sts:AssumeRole on resource: arn:aws:iam::300813158921:role/CF-StorageDeploy ---> Amazon.Runtime.Internal.HttpErrorResponseException: The remote server returned an error: (403) Forbidden. ---> System.Net.WebException: The remote server returned an error: (403) Forbidden.
+   at System.Net.HttpWebRequest.GetResponse()
+   at Amazon.Runtime.Internal.HttpRequest.GetResponse()
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpRequest.GetResponse()
+   at Amazon.Runtime.Internal.HttpHandler`1.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Unmarshaller.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeSync(IExecutionContext executionContext)
+   --- End of inner exception stack trace ---
+   at Amazon.Runtime.Internal.HttpErrorResponseExceptionHandler.HandleException(IExecutionContext executionContext, HttpErrorResponseException exception)
+   at Amazon.Runtime.Internal.ExceptionHandler`1.Handle(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.ProcessException(IExecutionContext executionContext, Exception exception)
+   at Amazon.Runtime.Internal.ErrorHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Signer.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CredentialsRetriever.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RetryHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.EndpointResolver.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.Marshaller.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.CallbackHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.ErrorCallbackHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.PipelineHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.MetricsHandler.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.Internal.RuntimePipeline.InvokeSync(IExecutionContext executionContext)
+   at Amazon.Runtime.AmazonServiceClient.Invoke[TRequest,TResponse](TRequest request, IMarshaller`2 marshaller, ResponseUnmarshaller unmarshaller)
+   at Amazon.SecurityToken.AmazonSecurityTokenServiceClient.AssumeRole(AssumeRoleRequest request)
+   at StorageGlacierRetrieval.Helper.S3Helper..ctor(String region) in C:\Users\parkumar\Downloads\storage-file-restore-ftp\storage-file-restore-ftp\StorageGlacierRetrieval\StorageGlacierRetrieval\Helper\S3Helper.cs:line 25
+   at StorageGlacierRetrieval.Controller.RestoreFileController.get_S3() in C:\Users\parkumar\Downloads\storage-file-restore-ftp\storage-file-restore-ftp\StorageGlacierRetrieval\StorageGlacierRetrieval\Controller\RestoreFileController.cs:line 40
+   at StorageGlacierRetrieval.Controller.RestoreFileController.TryToRestoreFile(CloudFileEntry fileEntry) in C:\Users\parkumar\Downloads\storage-file-restore-ftp\storage-file-restore-ftp\StorageGlacierRetrieval\StorageGlacierRetrieval\Controller\RestoreFileController.cs:line 102
+   at StorageGlacierRetrieval.Controller.RestoreFileController.ProcessFiles() in C:\Users\parkumar\Downloads\storage-file-restore-ftp\storage-file-restore-ftp\StorageGlacierRetrieval\StorageGlacierRetrieval\Controller\RestoreFileController.cs:line 74"
